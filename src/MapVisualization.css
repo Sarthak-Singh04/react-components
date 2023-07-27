@@ -1,3 +1,53 @@
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loading-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #000;
+  margin: 0 5px;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.circle1 {
+  animation-name: scaleUp;
+  animation-delay: 0s;
+}
+
+.circle2 {
+  animation-name: scaleUp;
+  animation-delay: 0.2s;
+}
+
+.circle3 {
+  animation-name: scaleUp;
+  animation-delay: 0.4s;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .tooltip {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.8);
