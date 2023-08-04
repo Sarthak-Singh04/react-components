@@ -109,7 +109,7 @@ const MapVisualization = () => {
 
       // Legend code
       const legend = d3.select("#legend");
-      const legendWidth = 580;
+      const legendWidth = 280;
       const legendHeight = 30;
       const legendPadding = 2;
 
@@ -190,29 +190,14 @@ const MapVisualization = () => {
           <h2 className="text-2xl font-bold text-center mb-4">
             USA Education Data
           </h2>
-          <div className="mb-4">
-            <p>
-              Welcome to the USA Education Data visualization! This choropleth
-              map showcases educational attainment data across various countries
-              in the United States.
-            </p>
-            <p>
-              The map uses color gradients to represent the percentage of adults
-              (aged 25 and above) who have completed different education levels
-              in each county.
-            </p>
-            <p>
-              Hover over each county to see specific details, or click on a
-              county to explore more information and trends related to education
-              in that region.
-            </p>
-            <p>
-              Let's gain insights into the educational landscape of the USA
-              together!
-            </p>
+
+          <div className=" overflow-x-auto md:overflow-hidden">
+            <svg
+              id="canvas"
+              className="h-[600px] w-[1000px] bg-[#ffff] mx-auto"
+            ></svg>
+            <svg id="legend" className=""></svg>
           </div>
-          <svg id="canvas" className="w-full min-h-screen bg-[#ffff]"></svg>
-          <svg id="legend" className="w-full mt-8"></svg>
         </>
       )}
     </div>
